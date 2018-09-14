@@ -1,0 +1,27 @@
+ [
+        {
+            "name": "TATA",
+            "share": "1000",
+            "price": "2500"
+        },
+        {
+            "name": "BIRLA",
+            "share": "120",
+            "price": "3000"
+        },
+        {
+            "name": "RELIANCE",
+            "share": "120",
+            "price": "2000"
+        },
+        {
+            "name": "INDIGO",
+            "share": "220",
+            "price": "3500"
+        },
+        {
+            "name": "SAIL",
+            "share": "220",
+            "price": "1500"
+        }
+    ]
