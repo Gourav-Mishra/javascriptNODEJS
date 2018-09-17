@@ -1,27 +1,34 @@
- [
+{
+    "stockU": [
         {
             "name": "TATA",
-            "share": "1000",
-            "price": "2500"
+            "numberofshare": 500,
+            "shareprice": "2500"
         },
         {
-            "name": "BIRLA",
-            "share": "120",
-            "price": "3000"
+            "name": "TCS",
+            "numberofshare": 200,
+            "shareprice": "2500"
         },
         {
-            "name": "RELIANCE",
-            "share": "120",
-            "price": "2000"
+            "name": "FORD",
+            "numberofshare": 300,
+            "shareprice": "13000"
         },
         {
-            "name": "INDIGO",
-            "share": "220",
-            "price": "3500"
+            "name": "BENZ",
+            "numberofshare": 400,
+            "shareprice": "3000"
         },
         {
-            "name": "SAIL",
-            "share": "220",
-            "price": "1500"
+            "name": "RENAULT",
+            "numberofshare": 800,
+            "shareprice": "3000"
+        },
+        {
+            "name": "LAMBO",
+            "numberofshare": 1000,
+            "shareprice": "3000"
         }
     ]
+}

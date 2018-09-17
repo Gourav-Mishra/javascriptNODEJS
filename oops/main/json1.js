@@ -1,3 +1,14 @@
+
+/****************************************************************************** 
+ * 
+ *  Purpose         :  LEARNING  (OOPS concept)
+ *  @description    :
+ *  @file           : Inventory data management
+ *  @module         : JSON (JAVA SCRIPT OBJECT NOTATION)
+ *  @author         : BridgeLabz <GOURAV MISHRA>
+ *  @since          : 11/09/2018
+ *
+ ******************************************************************************/
 var fs = require('fs');
 // Get content from file
  var data = fs.readFileSync("jason1.json");

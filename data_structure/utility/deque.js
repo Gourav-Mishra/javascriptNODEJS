@@ -45,7 +45,8 @@
 module.exports ={
 
     /**
-     * @description Pallindrome implementation using queue,
+     * @description Pallindrome implementation using dqueue,
+     * 
      * @param string the input string is checked for pallindrome.
      * 
      */

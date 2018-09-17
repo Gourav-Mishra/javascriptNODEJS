@@ -1,78 +1,100 @@
-var random=require('lodash')
-var card=""
-arr=["diamond","spade","heart","club"];
-arr1=["2","3","4","5","6","7","8","9","king","jack","queen","Ace"];
-function rando(min,max)
+/****************************************************************************** 
+ * 
+ *  Purpose         :  LEARNING  (OOPS concept)
+ *  @description    :
+ *  @file           : PLAYING CARDS
+ *  @module         : 
+ *  @author         : BridgeLabz <GOURAV MISHRA>
+ *  @since          : 11/09/2018
+ *
+ ******************************************************************************/
+/**
+ * @description playing cards are chosen randomly using random function .
+ *              there are 4 players in the game,to every player a set of 9 cards are distribuited ramdomly.  
+ */
+
+var sort=require('/home/gourav/JAVASCRIPT/oops/main/sorting.js')
+var card = ""
+arr = ["diamonds(♦)", "spades(♠)", "hearts(♥)", "club(♣)"]; // array of suits
+arr1 = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "K", "J", "Q", "A"]; // array of all possible outcomes
+
+function rando(min, max)           // defination of random function
 {
-    var ofset=min;
-    var range=(max-min)+1
-    var randomNumber=Math.floor(Math.random()*range)+ofset;
+    var ofset = min;
+    var range = (max - min) + 1
+    var randomNumber = Math.floor(Math.random() * range) + ofset;
     return randomNumber;
 }
-var players=[];
-var player1=[];
+var players = [];
+var player1 = [];
 
-var player2=[];
+var player2 = [];
 
-var player3=[];
+var player3 = [];
 
-var player4=[];
+var player4 = [];
 
-for (i = 1; i <= 9; i++) 
-{
+for (i = 1; i <= 9; i++) {
     randomNumber = rando(0, arr.length - 1)
     randomItem = arr[randomNumber]
     randomNumber1 = rando(0, arr1.length - 1)
     randomItem1 = arr1[randomNumber1]
-    var card = (randomItem + " " + randomItem1)
+    var card = (randomItem1 + " " + randomItem)
     player1.push(card)
     
+
 }
-//console.log(player1)
-    
+var sorter=sort.mysort('A2345678910JQK')
+player1.sort(sorter)
 
 
 
-for (i = 1; i <= 9; i++) 
-{
+
+for (i = 1; i <= 9; i++) {
     randomNumber = rando(0, arr.length - 1)
     randomItem = arr[randomNumber]
     randomNumber1 = rando(0, arr1.length - 1)
     randomItem1 = arr1[randomNumber1]
-    var card = (randomItem + " " + randomItem1)
+    var card = (randomItem1 + " " + randomItem)
     player2.push(card)
     
 }
+var sorter=sort.mysort('A2345678910JQK')
+player2.sort(sorter)
 
 
-for (i = 1; i <= 9; i++) 
-{
+for (i = 1; i <= 9; i++) {
     randomNumber = rando(0, arr.length - 1)
     randomItem = arr[randomNumber]
     randomNumber1 = rando(0, arr1.length - 1)
     randomItem1 = arr1[randomNumber1]
-    var card = (randomItem + " " + randomItem1)
+    var card = (randomItem1 + " " + randomItem)
     player3.push(card)
-    
+
 }
+var sorter=sort.mysort('A2345678910JQK')
+player3.sort(sorter)
 
 
-for (i = 1; i <= 9; i++) 
-{
+
+for (i = 1; i <= 9; i++) {
     randomNumber = rando(0, arr.length - 1)
     randomItem = arr[randomNumber]
     randomNumber1 = rando(0, arr1.length - 1)
     randomItem1 = arr1[randomNumber1]
-    var card = (randomItem + " " + randomItem1)
+    var card = (randomItem1 + " " + randomItem)
     player4.push(card)
-    
-}
 
-players.push(player1);
+}
+var sorter=sort.mysort('A2345678910JQK')
+player4.sort(sorter)
+
+
+players.push(player1);          //pushing all individual array to player array.
 players.push(player2);
 players.push(player3);
 players.push(player4);
-console.log(players);
+console.log(players);          // pring the resultant 2-D array
 
 
 

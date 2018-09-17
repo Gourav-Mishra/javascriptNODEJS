@@ -1,5 +1,19 @@
-
-var random=require('lodash')
+/****************************************************************************** 
+ * 
+ *  Purpose         :  LEARNING  (OOPS concept)
+ *  @description    :
+ *  @file           : PLAYING CARDS
+ *  @module         : 
+ *  @author         : BridgeLabz <GOURAV MISHRA>
+ *  @since          : 11/09/2018
+ *
+ ******************************************************************************/
+/**
+ * @description playing cards are chosen randomly using random function .
+ *              there are 4 players in the game,to every player a set of 9 cards are distribuited ramdomly.
+ *              here object of player is made, in which further arrayobjects are made.
+ */
+var sort=require('/home/gourav/JAVASCRIPT/oops/main/sorting.js')
 var card="";
 var player={
     player1:[],
@@ -7,7 +21,7 @@ var player={
     player3:[],
     player4:[],
     players:[],
-    arr:["diamond","spade","heart","club"],
+    arr:["diamonds(♦)","spades(♠)","hearts(♥)","club(♣)"],
     arr1:["2","3","4","5","6","7","8","9","king","jack","queen","Ace"]
 }
 function rando(min,max)

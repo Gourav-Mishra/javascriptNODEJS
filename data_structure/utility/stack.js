@@ -48,53 +48,48 @@ module.exports = {
 
 /**
  * @description balanced paranthesis of the expression are checked using Stack.
- * @param expression in this the expression given by the user is the input expression.
+ * @param {string}. expression is checked only for the balanced paranthesis
  * 
  */
-    balancedparanthesis: function (expression) {
-        var stack = new Stack();
-        var count = 0, counter = 0;
-
-        for (var i = 0; i < expression.length; i++) {
-            if (expression[i] == '(') {
-                stack.push(expression[i])
-                count++;
-            }
-            else if (expression[i] = ')') {
-                stack.pop(expression[i])
-                counter++
-            }
+balancedparanthesis: function (expression) {
+    var stack = new Stack();
+    var count = 0, counter = 0;
+    for (var i = 0; i < expression.length; i++) {
+        if (expression[i] == '(') {
+            stack.push(expression[i]);
+            count++;
         }
-        if (count == counter) {
-            console.log("TRUE");
-
-        } else {
-            console.log("FALSE");
+        else if (expression[i] == ')') {
+            stack.pop();
+            counter++;
         }
-
-
-    },
+    }
+    if (count == counter) {
+        console.log( " \nBALANCED PARANTHESIS");
+    } else {
+        console.log( " \nUNBALANCED PARANTHESIS");
+    }
+},
     /**
      * @description the prime number in the set of 100 are calculated in this program ,ie. from 0-100,100-200 and so on.
-     * @param prime number are first stored in  a array and the the further condion are applied to split the array into sets
-     * 
+     * @param {number}. number are first stored in  a array and the the further condion are applied to split the array into sets 
      */
 
     prime2d: function () {
         var flag, i, prime = [], arr = [], array = [], arr1 = [], arr2 = [], arr3 = [], arr4 = [], arr5 = [], arr6 = [], arr7 = [], arr8 = [], arr9 = [];
 
-        for (i = 0; i < 1000; i++)      //outer for loop starts
+        for (i = 0; i < 1000; i++)    
         {
             flag = 1;
-            for (var j = 2; j <= i / 2; j++)   //inner for loop starts 
+            for (var j = 2; j <= i / 2; j++)   
             {
                 if (i % j === 0) {
                     flag = 0;
                     break;
                 }
-            }       //inner for loop ends
+            }       
             if (flag === 1) {
-                prime.push(i);
+                prime.push(i);            //prime number pushed into the array.
             }
         }
         var str = "";
@@ -246,9 +241,9 @@ module.exports = {
         for (var j = 0; j < arr1.length; j++) {
             stack2.push(arr1[j]);
         }
-        console.log("Prime numbers between 0 and 1000 are==> ");
+        console.log("Prime numbers between 0 and 1000 are==> \n");
         console.log(stack1.printStack());
-        console.log("Prime Anagram pairs between 0 and 1000 are==> ");
+        console.log("Prime Anagram pairs between 0 and 1000 are==>\n ");
         console.log(stack2.printStack());
     },
 

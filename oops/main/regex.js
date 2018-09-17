@@ -1,6 +1,6 @@
 var read=require('readline-sync')
-var namepattern=/^[a-zA-Z\\s]*$/;
-var pattern2=/^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$/
+var namepattern=/^[a-zA-Z\\s]*$/;                         // validaton of first name
+var pattern2=/^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$/              // validation of full name 
 var fname=read.question("Enter Your Name: ")
 if(!fname.match(namepattern))
 {
@@ -38,14 +38,9 @@ var student={
     '91­xxxxxxxxxx':mobilenumber,
     '<<full name>>':fullname,
     '01-01-2016':date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear(),
-  /*  fullname:function(){
-      return this.fname+" "+this.lname
-
-    },
-    '<<full name>>':fullname()*/
-    
+  
 }
-//student.fullname()
+
 
 var str="Hello <<name>>, We have your full name as <<full name>> in our system. your contact number is 91­xxxxxxxxxx.Please,let us know in case of any clarification Thank you BridgeLabz 01-01-2016."
 console.log("STATEMENT : "+str)

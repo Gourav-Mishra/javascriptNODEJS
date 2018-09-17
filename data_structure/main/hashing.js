@@ -1,6 +1,7 @@
 var fs = require('fs');
-var readline = require('readline')
-var utility= require('../utility/queue');
+var readsync = require("readline-sync");
+var readline=require('readline');
+var util = require('/home/gourav/JAVASCRIPT/data_structure/utility/linkedlist.js');
 
 
 var read = readline.createInterface({
@@ -8,13 +9,9 @@ var read = readline.createInterface({
     output: process.stdout
 });
 
-
-var data = fs.readFileSync('hash.txt');
-data = (data.toString()).split(',');
-
 function hashing() {
         
-            utility.hashing(data);
+            util.hashing(fs,readsync);
             read.close();        
 }
 hashing();

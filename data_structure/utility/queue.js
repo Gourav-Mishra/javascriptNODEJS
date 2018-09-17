@@ -100,19 +100,19 @@ module.exports = {
         }
 
         while (queue.len()) {
-            var option = read.question("Enter 1 to Display Balance, 2 to Deposit Amount  and 3 to Withdraw  Amount")
+            var option = read.question("Enter 1 to Display Balance,\n      2 to Deposit Amount,\n      3 to Withdraw  Amount.\n      4 to EXIT")
             switch (option) {
-                case '1': console.log("Your Account Ballance is: "+balance)
+                case '1': console.log("Your Account Ballance is: "+balance+"\n")
                 break;
 
-                case '2': var deposit = read.question("Enter the amount you want to Deposit in INR ")
+                case '2': var deposit = read.question("\nEnter the amount you want to Deposit in INR   ")
                     deposit = parseInt(deposit);
                     balance = balance + deposit;
                     console.log("Your NEW Balance= " + balance + " INR");
                     break;
 
 
-                case '3': var withdraw = read.question("enter the amount you want to withdraw in INR")
+                case '3': var withdraw = read.question("Enter the amount you want to withdraw in INR")
                     if (balance < withdraw) {
                         console.log("SORRY !!! Insufficient Funds...")
 
@@ -122,68 +122,14 @@ module.exports = {
 
                     }
                     break;
+                    case '4': process.exit();
+
                 default: console.log("Sorry :-( Your Request Cant be processed....")
             }
             queue.dequeue();
         }
     },
-/**
- * @description this a hashing implementation ,in which the file is read from file and then arranged in a array in a certain order .
- * @param data the number input in the file.
- */
-    
-    hashing: function (data) {
-        var fs=require('fs');
-        var array = [], arr0 = [], arr1 = [], arr2 = [], arr3 = [], arr4 = [], arr5 = [], arr6 = [], arr7 = [], arr8 = [], arr9 = [];
-        for (var i = 0; i < data.length; i++) {
-            if ((data[i] % 11) === 0) {
-                arr0.push(data[i]);
-            } else if ((data[i] % 11) === 1) {
-                arr1.push(data[i]);
-            } else if ((data[i] % 11) === 2) {
-                arr2.push(data[i]);
-            } else if ((data[i] % 11) === 3) {
-                arr3.push(data[i]);
-            } else if ((data[i] % 11) === 4) {
-                arr4.push(data[i]);
-            } else if ((data[i] % 11) === 5) {
-                arr5.push(data[i]);
-            } else if ((data[i] % 11) === 6) {
-                arr6.push(data[i]);
-            } else if ((data[i] % 11) === 7) {
-                arr7.push(data[i]);
-            } else if ((data[i] % 11) === 8) {
-                arr8.push(data[i]);
-            } else if ((data[i] % 11) === 9) {
-                arr9.push(data[i]);
-            }
-        }
-        array.push(arr0);
-        array.push(arr1);
-        array.push(arr2);
-        array.push(arr3);
-        array.push(arr4);
-        array.push(arr5);
-        array.push(arr6);
-        array.push(arr7);
-        array.push(arr8);
-        array.push(arr9);
-        
-        for (var i = 0; i < array.length; i++) {
-           /*var p= array[i].join('->');
-            try {
-                fs.writeFileSync('hash_op.txt',
-                
-                (`${i}th slot: ` + p) , { mode: 0o755 });
-              } catch(err) {
-                // An error occurred
-                console.error(err);
-              }*/
-            console.log(`${i}th slot: ` + array[i].join('->'));
-        }
-    
-        
-    },
+
     /**                     
      * @description In this program the prime numbers which are annagram are printed using queue,
      *               in this program the prime number  is used as the input array .
